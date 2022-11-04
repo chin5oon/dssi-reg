@@ -9,7 +9,7 @@ import pickle
 # import pyautogui # for reset button: pip install pyautogui
 
 # load the model.pkl
-path = r'C:\Users\kwach\OneDrive\Desktop\Workshop\model.pkl'
+path = r'C:/Users/kwach/OneDrive/Desktop/Workshop/model.pkl'
 with open('model.pkl', "rb") as f:
 	model = pickle.load(f)
 
@@ -41,7 +41,7 @@ def main():
 	#front end elements of the web page 
 	# pick colors from: https://www.w3schools.com/tags/ref_colornames.asp
 	html_temp = """ <div style ="background-color:AntiqueWhite;padding:15px"> 
-       <h1 style ="color:black;text-align:center;">A loan application assessment app</h1> 
+       <h1 style ="color:black;text-align:center;">A customer attrition assessment app</h1> 
        </div> <br/>"""
 
     #display the front end aspect
@@ -53,8 +53,8 @@ def main():
 
 	age = st.sidebar.slider('age', 21, 75, 30)
 	st.write('input age', age)
-	IncomeK = st.sidebar.slider('Income in 1000s', 8, 300, 120)
-	st.write('input income in 000', IncomeK*1000)
+	incomeK = st.sidebar.slider('Income in 1000s', 8, 300, 120)
+	st.write('input income in 000', incomeK*1000)
 	HHsize = st.sidebar.slider('household size', 1, 6, 2)
 	st.write('input household size', HHsize)
 	kids = st.sidebar.slider('kids', 0, 3, 1)
